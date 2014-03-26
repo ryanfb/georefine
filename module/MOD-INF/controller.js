@@ -41,4 +41,6 @@ var ClientSideResourceManager = Packages.com.google.refine.ClientSideResourceMan
 function init() {
   // Packages.java.lang.System.err.println("Initializing GeoRefine extension");
   // Packages.java.lang.System.err.println(module.getMountPoint());
+  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+    "createPoint", new Packages.io.github.ryanfb.georefine.CreatePoint());
 }
