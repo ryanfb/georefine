@@ -45,4 +45,7 @@ function init() {
     "point", new Packages.io.github.ryanfb.georefine.CreatePoint());
   Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
     "distance", new Packages.io.github.ryanfb.georefine.Distance());
+  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+    "parseGeoJson", new Packages.io.github.ryanfb.georefine.ParseGeoJSON());
+
 }

@@ -8,6 +8,7 @@ GREL functions
 
  * `point`: creates a point from latitude and longitude in the WGS84 coordinate reference system
  * `distance`: computes the distance between two points in meters
+ * `parseGeoJson`: parses GeoJSON string
 
 Feature Wishlist
 ----------------

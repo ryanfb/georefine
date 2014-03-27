@@ -40,6 +40,11 @@
       <version>11.0</version>
     </dependency>
     <dependency>
+      <groupId>org.geotools</groupId>
+      <artifactId>gt-geojson</artifactId>
+      <version>11.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.openrefine</groupId>
       <artifactId>openrefine</artifactId>
       <version>1.0</version>
