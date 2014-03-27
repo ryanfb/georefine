@@ -48,4 +48,22 @@ function init() {
   Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
     "parseGeoJson", new Packages.io.github.ryanfb.georefine.ParseGeoJSON());
 
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "equals", new Packages.io.github.ryanfb.georefine.Equals());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "contains", new Packages.io.github.ryanfb.georefine.Contains());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "within", new Packages.io.github.ryanfb.georefine.Within());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "overlaps", new Packages.io.github.ryanfb.georefine.Overlaps());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "crosses", new Packages.io.github.ryanfb.georefine.Crosses());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "touches", new Packages.io.github.ryanfb.georefine.Touches());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "intersects", new Packages.io.github.ryanfb.georefine.Intersects());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "disjoint", new Packages.io.github.ryanfb.georefine.Disjoint());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+	  "relate", new Packages.io.github.ryanfb.georefine.Relate());
 }

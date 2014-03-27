@@ -9,6 +9,23 @@ GREL functions
  * `point`: creates a point from latitude and longitude in the WGS84 coordinate reference system
  * `distance`: computes the distance between two points in meters
  * `parseGeoJson`: parses GeoJSON string
+ * [All geometry relationship functions described here](http://docs.geotools.org/stable/userguide/library/jts/relate.html):
+    * `equals`
+    * `contains`
+    * `within`
+    * `overlaps`
+    * `crosses`
+    * `touches`
+    * `intersects`
+    * `disjoint`
+    * `relate`
+
+Examples
+--------
+
+Using GREL to facet places based on whether they're contained by [the Barrington Atlas capgrid for Byzantium](http://atlantides.org/capgrids/52):
+
+    contains(parseGeoJson("{\"type\": \"Polygon\", \"coordinates\": [[[31.0, 40.0], [31.0, 42.0], [27.0, 42.0], [27.0, 40.0], [31.0, 40.0]]]}"),parseGeoJson(value))
 
 Feature Wishlist
 ----------------
