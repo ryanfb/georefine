@@ -43,4 +43,6 @@ function init() {
   // Packages.java.lang.System.err.println(module.getMountPoint());
   Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
     "point", new Packages.io.github.ryanfb.georefine.CreatePoint());
+  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+    "distance", new Packages.io.github.ryanfb.georefine.Distance());
 }
