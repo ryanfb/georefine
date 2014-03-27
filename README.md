@@ -20,6 +20,13 @@ GREL functions
     * `disjoint`
     * `relate`
 
+Installation
+------------
+
+[Download GeoRefine](https://github.com/ryanfb/georefine/archive/master.zip) and place the unzipped folder in the `extensions` directory of your OpenRefine workspace.
+
+On OS X, this will be `/Applications/Google Refine.app/Contents/Resources/webapp/extensions`.
+
 Examples
 --------
 
