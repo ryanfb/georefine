@@ -26,11 +26,10 @@ public class CreatePoint implements Function {
             };
             
             GeometryBuilder builder = new GeometryBuilder(DefaultGeographicCRS.WGS84);
-            // PrimitiveFactory primFF = builder.getPrimitiveFactory();
-
+            
             return builder.createPoint(latlng);
         }
-        return new EvalError(ControlFunctionRegistry.getFunctionName(this) + " expects 2 strings");
+        return new EvalError(ControlFunctionRegistry.getFunctionName(this) + " expects 2 arguments");
     }
 
     public void write(JSONWriter writer, Properties options)
