@@ -13,6 +13,8 @@ import org.geotools.geometry.GeometryBuilder;
 import org.geotools.referencing.crs.DefaultGeographicCRS;
 import org.opengis.geometry.primitive.PrimitiveFactory;
 
+import org.geotools.geometry.jts.JTS;
+
 public class CreatePoint implements Function {
 
     public Object call(Properties bindings, Object[] args) {
@@ -27,7 +29,7 @@ public class CreatePoint implements Function {
             
             GeometryBuilder builder = new GeometryBuilder(DefaultGeographicCRS.WGS84);
             
-            return builder.createPoint(latlng);
+            return JTS.toGeometry(builder.createPoint(latlng).getDirectPosition());
         }
         return new EvalError(ControlFunctionRegistry.getFunctionName(this) + " expects 2 arguments");
     }

@@ -17,16 +17,17 @@ import org.geotools.geometry.jts.JTS;
 import com.vividsolutions.jts.geom.Coordinate;
 import org.geotools.referencing.GeodeticCalculator;
 
+import com.vividsolutions.jts.geom.Geometry;
+
 public class Distance implements Function {
 
     public Object call(Properties bindings, Object[] args) {
         if(args.length==2){
             try {
-                GeodeticCalculator gc = new GeodeticCalculator(DefaultGeographicCRS.WGS84);
-                gc.setStartingPosition(((org.opengis.geometry.primitive.Point)args[0]).getDirectPosition());
-                gc.setDestinationPosition(((org.opengis.geometry.primitive.Point)args[1]).getDirectPosition());
-    
-                return gc.getOrthodromicDistance();
+                return JTS.orthodromicDistance(
+                    ((com.vividsolutions.jts.geom.Point)args[0]).getCoordinate(),
+                    ((com.vividsolutions.jts.geom.Point)args[1]).getCoordinate(),
+                    DefaultGeographicCRS.WGS84);
             }
             catch (org.opengis.referencing.operation.TransformException e) {
                 return new EvalError(ControlFunctionRegistry.getFunctionName(this) + ": TransformException: " + e.getMessage());
