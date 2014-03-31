@@ -47,6 +47,8 @@ function init() {
     "distance", new Packages.io.github.ryanfb.georefine.Distance());
   Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
     "parseGeoJson", new Packages.io.github.ryanfb.georefine.ParseGeoJSON());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+    "parseWkt", new Packages.io.github.ryanfb.georefine.ParseWKT());
 
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
 	  "equals", new Packages.io.github.ryanfb.georefine.Equals());

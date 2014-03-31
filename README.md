@@ -8,7 +8,8 @@ GREL functions
 
  * `point`: creates a point from latitude and longitude in the WGS84 coordinate reference system
  * `distance`: computes the distance between two points in meters
- * `parseGeoJson`: parses GeoJSON string
+ * `parseGeoJson`: parses [GeoJSON](http://geojson.org/) string
+ * `parseWkt`: parses [WKT](http://en.wikipedia.org/wiki/Well-known_text) string
  * [All geometry relationship functions described here](http://docs.geotools.org/stable/userguide/library/jts/relate.html):
     * `equals`
     * `contains`
@@ -37,7 +38,7 @@ Using GREL to facet places based on whether they're contained by [the Barrington
 Feature Wishlist
 ----------------
 
- * parsing geospatial information from and to GeoJSON/WKT/WKB
+ * parsing geospatial information from and to GeoJSON/WKT
  * spatial operations in GREL: distance, area, contains, overlaps, touches, equals, crosses, disjoint, within
  * spatial faceting on spatial operations
  * spatial clustering
