@@ -39,33 +39,33 @@ var ClientSideResourceManager = Packages.com.google.refine.ClientSideResourceMan
  * Function invoked to initialize the extension.
  */
 function init() {
-  // Packages.java.lang.System.err.println("Initializing GeoRefine extension");
-  // Packages.java.lang.System.err.println(module.getMountPoint());
-  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-    "point", new Packages.io.github.ryanfb.georefine.CreatePoint());
-  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-    "distance", new Packages.io.github.ryanfb.georefine.Distance());
-  Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-    "parseGeoJson", new Packages.io.github.ryanfb.georefine.ParseGeoJSON());
+	// Packages.java.lang.System.err.println("Initializing GeoRefine extension");
+	// Packages.java.lang.System.err.println(module.getMountPoint());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-    "parseWkt", new Packages.io.github.ryanfb.georefine.ParseWKT());
+		"point", new Packages.io.github.ryanfb.georefine.CreatePoint());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+		"distance", new Packages.io.github.ryanfb.georefine.Distance());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+		"parseGeoJson", new Packages.io.github.ryanfb.georefine.ParseGeoJSON());
+	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
+		"parseWkt", new Packages.io.github.ryanfb.georefine.ParseWKT());
 
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "equals", new Packages.io.github.ryanfb.georefine.Equals());
+		"equals", new Packages.io.github.ryanfb.georefine.Equals());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "contains", new Packages.io.github.ryanfb.georefine.Contains());
+		"contains", new Packages.io.github.ryanfb.georefine.Contains());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "within", new Packages.io.github.ryanfb.georefine.Within());
+		"within", new Packages.io.github.ryanfb.georefine.Within());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "overlaps", new Packages.io.github.ryanfb.georefine.Overlaps());
+		"overlaps", new Packages.io.github.ryanfb.georefine.Overlaps());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "crosses", new Packages.io.github.ryanfb.georefine.Crosses());
+		"crosses", new Packages.io.github.ryanfb.georefine.Crosses());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "touches", new Packages.io.github.ryanfb.georefine.Touches());
+		"touches", new Packages.io.github.ryanfb.georefine.Touches());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "intersects", new Packages.io.github.ryanfb.georefine.Intersects());
+		"intersects", new Packages.io.github.ryanfb.georefine.Intersects());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "disjoint", new Packages.io.github.ryanfb.georefine.Disjoint());
+		"disjoint", new Packages.io.github.ryanfb.georefine.Disjoint());
 	Packages.com.google.refine.grel.ControlFunctionRegistry.registerFunction(
-	  "relate", new Packages.io.github.ryanfb.georefine.Relate());
+		"relate", new Packages.io.github.ryanfb.georefine.Relate());
 }
